@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="game-container">
+        <input type="text" id="username" placeholder="Tu nombre">
+        <button onclick="join()">Entrar al juego</button>
+
+        <div id="controls" style="display:none;">
+            <button onclick="answer(0)" style="background: red;">Triángulo</button>
+            <button onclick="answer(1)" style="background: blue;">Rombo</button>
+            <button onclick="answer(2)" style="background: orange;">Círculo</button>
+            <button onclick="answer(3)" style="background: green;">Cuadrado</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/scripts/StudentUi.js"></script>
+</body>
+</html>

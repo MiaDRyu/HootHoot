@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-purple-700 text-white font-sans h-screen flex flex-col items-center justify-center p-10">
+
+    <div id="lobby" class="text-center">
+        <h1 class="text-5xl font-bold mb-8">Pin del juego: <span class="text-yellow-400">123456</span></h1>
+        <div id="player-list" class="grid grid-cols-4 gap-4 text-2xl bg-white/10 p-6 rounded-xl min-w-[500px]"> Esperando jugadores...</div>
+        <button onclick="startQuiz()" class="mt-10 bg-green-500 hover:bg-green-400 px-8 py-4 rounded-full text-2xl dont-bold shadow-lg transition">Empezar</button>
+    </div>
+
+    <div id="game-screen" class="hidden w-full max-w-5xl text-center">
+        <h2 id="question-text" class="text-4xl font-bold mb-10 bg-white text-black p-6 rounded-lg shadow-xl"></h2>
+
+        <div class="grid grid-cols-2 gap-4 h-64">
+            <div class="bg-red-500 flex items-center justify-center text-3xl rounded-lg shadow-md" id="opt0"></div>
+            <div class="bg-blue-500 flex items-center justify-center text-3xl rounded-lg shadow-md" id="opt1"></div>
+            <div class="bg-yellow-500 flex items-center justify-center text-3xl rounded-lg shadow-md" id="opt2"></div>
+            <div class="bg-green-500 flex items-center justify-center text-3xl rounded-lg shadow-md" id="opt3"></div>
+        </div>
+
+        <div class="mt-10 flex justify-between items-center text-2xl">
+            <div id="timer" class="bg-white text-purple-700 w-20 h-20 rounded-full flex items-center justify-center font-bold border-4 border-purple-400">20</div>
+            <div id="responses-count">Respuestas: 0</div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/scripts/TeacherUi.js"></script>
+</body>
+</html>
