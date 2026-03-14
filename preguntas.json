@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "pregunta": "¿Quién es la más sorrita del DS51M",
+        "opciones": ["Mia", "Jazy", "Elías", "Miguel"],
+        "correcta": 2,
+        "tiempo": 20
+    },
+    {
+        "id": 2,
+        "pregunta": "¿Quién es la más sorrita del DS51M",
+        "opciones": ["Mia", "Jazy", "Elías", "Miguel"],
+        "correcta": 2,
+        "tiempo": 20
+    },
+    {
+        "id": 3,
+        "pregunta": "¿Quién es la más sorrita del DS51M",
+        "opciones": ["Mia", "Jazy", "Elías", "Miguel"],
+        "correcta": 2,
+        "tiempo": 20
+    },
+    {
+        "id": 4,
+        "pregunta": "¿Quién es la más sorrita del DS51M",
+        "opciones": ["Mia", "Jazy", "Elías", "Miguel"],
+        "correcta": 2,
+        "tiempo": 20
+    },
+    {
+        "id": 5,
+        "pregunta": "¿Quién es la más sorrita del DS51M",
+        "opciones": ["Mia", "Jazy", "Elías", "Miguel"],
+        "correcta": 2,
+        "tiempo": 20
+    },
+    {
+        "id": 6,
+        "pregunta": "¿Quién es la más sorrita del DS51M",
+        "opciones": ["Mia", "Jazy", "Elías", "Miguel"],
+        "correcta": 2,
+        "tiempo": 20
+    },
+    {
+        "id": 7,
+        "pregunta": "¿Quién es la más sorrita del DS51M",
+        "opciones": ["Mia", "Jazy", "Elías", "Miguel"],
+        "correcta": 2,
+        "tiempo": 20
+    },
+    {
+        "id": 8,
+        "pregunta": "¿Quién es la más sorrita del DS51M",
+        "opciones": ["Mia", "Jazy", "Elías", "Miguel"],
+        "correcta": 2,
+        "tiempo": 20
+    },
+    {
+        "id": 9,
+        "pregunta": "¿Quién es la más sorrita del DS51M",
+        "opciones": ["Mia", "Jazy", "Elías", "Miguel"],
+        "correcta": 2,
+        "tiempo": 20
+    },
+    {
+        "id": 10,
+        "pregunta": "¿Quién es la más sorrita del DS51M",
+        "opciones": ["Mia", "Jazy", "Elías", "Miguel"],
+        "correcta": 2,
+        "tiempo": 20
+    }
+]

@@ -28,6 +28,11 @@
             <div id="timer" class="bg-white text-purple-700 w-20 h-20 rounded-full flex items-center justify-center font-bold border-4 border-purple-400">20</div>
             <div id="responses-count">Respuestas: 0</div>
         </div>
+
+        <div class="mt-6 p-4 boreder-2 border-dashed border-white/30 rounded-lg">
+            <p class="mb-2">Cargar archivo JSON</p>
+            <input type="file" id="quizFile" accept=".json" class="block w-full text-sm text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-yellow-400 file:text-purple-900 hover:file:bg-yellow-300 cursor-pointer">
+        </div>
     </div>
 
     <script src="/socket.io/socket.io.js"></script>

@@ -1,10 +1,14 @@
 const express = require('express');
 const htttp = require ('http');
 const {server} = require('socket.io');
+const { text } = require('stream/consumers');
 
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
+
+let currentQuiz = [];
+let currentQuestionIndex = 0;
 
 let gameState = {
     question: "¿Qn es la más sorra del DS51M?",
@@ -33,6 +37,36 @@ io.on('connection', (socket) => {
         delete gameState.players[socket.id];
         io.emit('updatePlayers', Object.values(gameState.players));
     });
+
+    socket.on('startHost', () => {
+        socket.join('host-room');
+        console.log("Profesor 28 años conectado");
+    });
+
+    socket.on('nextQuestion', (questionData) => {
+        gameState.currentQuestion = questionData;
+        io.emit('newQuestion', {
+            text: questionData.text,
+            options: questionData.options
+        });
+    });
+
+    socket.on('requestNextQuestion', () => {
+        if (currentQuestionIndex < currentQuiz.length) {
+            const question = currentQuiz[currentQuestionIndex];
+
+            socket.emit('displayQuestionHost', question);
+
+            io.emit('newQuestionPlayer', {
+                text: question.pregunta,
+                options: question.opciones,
+                timer: question.tiempo
+            });
+            currentQuestionIndex++;
+        } else {
+            io.emit('gameOver', 'Fin del juego');
+        }
+    })
 });
 
 server.listen(3000, () => {
